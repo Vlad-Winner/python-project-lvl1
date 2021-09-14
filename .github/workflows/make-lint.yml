@@ -4,7 +4,9 @@ jobs:
   my-job:
     runs-on: ubuntu-latest
     steps:
-      - name: my-step
+      - name: checkout
         uses: actions/checkout@v2
+      - name: install
         run: pip install --user poetry
+      - name: my check
         run: make lint
