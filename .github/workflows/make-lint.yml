@@ -8,5 +8,7 @@ jobs:
         uses: actions/checkout@v2
       - name: install
         run: pip install --user poetry
+      - name: install package
+        run: make install
       - name: my check
         run: make lint
