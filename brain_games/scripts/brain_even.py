@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 """Game: Parity check."""
 from random import randrange
 import prompt
