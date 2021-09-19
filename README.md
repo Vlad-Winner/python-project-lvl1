@@ -1,5 +1,6 @@
 <a href="https://asciinema.org/a/436177" target="_blank"><img src="https://asciinema.org/a/436177.svg" /></a>
 <a href="https://asciinema.org/a/g16zVPqZg6Mp0MYIlgHEVDEr6" target="_blank"><img src="https://asciinema.org/a/g16zVPqZg6Mp0MYIlgHEVDEr6.svg" /></a>
+<a href="https://asciinema.org/a/zX7BBLFQRrzpxHLy66IC2J9E4" target="_blank"><img src="https://asciinema.org/a/zX7BBLFQRrzpxHLy66IC2J9E4.svg" /></a>
 
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/Vlad-Winner/python-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Vlad-Winner/python-project-lvl1/actions)
