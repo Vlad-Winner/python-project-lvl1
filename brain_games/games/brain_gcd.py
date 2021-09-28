@@ -2,6 +2,7 @@
 RULES = 'Find the greatest common divisor of given numbers.'
 NUMBER_COUNT = 2
 LIMIT = 50
+START_NUMBER = 1
 
 
 def correct_answer(one, two):
