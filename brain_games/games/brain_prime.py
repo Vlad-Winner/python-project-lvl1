@@ -1,6 +1,7 @@
-#!/usr/bin/env python
-from brain_games.scripts import logic
-from random import randrange
+RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+NUMBER_COUNT = 1
+LIMIT = 300
+START_NUMBER = 2
 
 
 def is_prime(n):
@@ -12,22 +13,10 @@ def is_prime(n):
     return d * d > n
 
 
-def main():
-    name = logic.welcome()
-    print('Answer "yes" if given number is prime. Otherwise answer "no".')
-    win = 0
-    for i in range(3):
-        question = randrange(2, 300)
-        if is_prime(question):
-            answer = 'yes'
-        else:
-            answer = 'no'
-        if logic.run(question, answer, name):
-            win += 1
-        else:
-            break
-    logic.finish(win, name)
-
-
-if __name__ == '__main__':
-    main()
+def main(number):
+    question = number[0]
+    if is_prime(question):
+        answer = 'yes'
+    else:
+        answer = 'no'
+    return question, answer
