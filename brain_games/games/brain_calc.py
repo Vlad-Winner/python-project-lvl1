@@ -5,6 +5,7 @@ from random import choice
 RULES = 'What is he result of the expression?'
 NUMBER_COUNT = 2
 LIMIT = 55
+START_NUMBER = 1
 
 
 def main(number):
