@@ -4,6 +4,7 @@ from random import randrange
 RULES = 'What number is missing in the progression?'
 NUMBER_COUNT = 1
 LIMIT = 30
+START_NUMBER = 2
 
 
 def main(question_array):
