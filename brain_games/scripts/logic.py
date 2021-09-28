@@ -3,7 +3,6 @@ from random import randrange
 
 
 ROUND = 3
-START_NUMBER = 1
 
 
 def welcome():
@@ -13,10 +12,10 @@ def welcome():
     return name
 
 
-def generate_number(count, limit):
+def generate_number(count, limit, start_number):
     numbers = []
     for i in range(count):
-        numbers.append(randrange(START_NUMBER, limit))
+        numbers.append(randrange(start_number, limit))
     return numbers
 
 
@@ -43,7 +42,8 @@ def run(game):
     print(game.RULES)
     win = 0
     for i in range(ROUND):
-        numbers = generate_number(game.NUMBER_COUNT, game.LIMIT)
+        numbers = generate_number(
+            game.NUMBER_COUNT, game.LIMIT, game.START_NUMBER)
         question, right_answer = game.main(numbers)
         if is_correct(question, right_answer, name):
             win += 1
