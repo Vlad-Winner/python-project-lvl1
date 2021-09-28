@@ -11,13 +11,11 @@ START_NUMBER = 1
 def main(number):
     arguments = ['+', '-', '*']
     argument = choice(arguments)
+    question = '{} {} {}'.format(number[0], argument, number[1])
     if argument == '-':
-        question = str(number[0]) + ' - ' + str(number[1])
         answer = str(number[0] - number[1])
     elif argument == '+':
-        question = str(number[0]) + ' + ' + str(number[1])
         answer = str(number[0] + number[1])
     elif argument == '*':
-        question = str(number[0]) + ' * ' + str(number[1])
         answer = str(number[0] * number[1])
     return question, answer
