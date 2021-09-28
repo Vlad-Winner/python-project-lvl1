@@ -40,9 +40,8 @@ def run(game):
     win = 0
     for i in range(3):
         numbers = generate_number(game.NUMBER_COUNT, game.LIMIT)
-        if is_correct(game.question(numbers),
-                      game.right_answer(numbers),
-                      name):
+        question, right_answer = game.main(numbers)
+        if is_correct(question, right_answer, name):
             win += 1
         else:
             break
