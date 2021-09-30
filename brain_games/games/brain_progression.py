@@ -7,7 +7,7 @@ LIMIT = 30
 START_NUMBER = 2
 
 
-def main(question_array):
+def get_question_and_answer(question_array):
     sequence_amount = randrange(5, 11)
     step = randrange(2, 11)
     missing_number = randrange(sequence_amount)

@@ -44,7 +44,7 @@ def run(game):
     for i in range(ROUND_COUNT):
         numbers = generate_number(
             game.NUMBER_COUNT, game.LIMIT, game.START_NUMBER)
-        question, right_answer = game.main(numbers)
+        question, right_answer = game.get_question_and_answer(numbers)
         if is_correct(question, right_answer, name):
             win += 1
         else:

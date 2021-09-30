@@ -8,7 +8,7 @@ LIMIT = 55
 START_NUMBER = 1
 
 
-def main(number):
+def get_question_and_answer(number):
     operators = ['+', '-', '*']
     operator = choice(operators)
     question = '{} {} {}'.format(number[0], operator, number[1])

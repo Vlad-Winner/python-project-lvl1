@@ -13,7 +13,7 @@ def is_prime(n):
     return d * d > n
 
 
-def main(number):
+def get_question_and_answer(number):
     question = number[0]
     if is_prime(question):
         answer = 'yes'
