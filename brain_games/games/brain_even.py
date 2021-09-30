@@ -6,9 +6,9 @@ START_NUMBER = 1
 
 
 def main(number):
-    number = number[0]
+    question = number[0]
     if number % 2 == 0:
         answer = 'yes'
     else:
         answer = 'no'
-    return number, answer
+    return question, answer
