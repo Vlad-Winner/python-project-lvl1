@@ -2,7 +2,7 @@ import prompt
 from random import randrange
 
 
-ROUND = 3
+ROUND_COUNT = 3
 
 
 def welcome():
@@ -33,7 +33,7 @@ def is_correct(question, right_answer, name):
 
 
 def finish(win, name):
-    if win == ROUND:
+    if win == ROUND_COUNT:
         print('Congratulations, {}!'.format(name))
 
 
@@ -41,7 +41,7 @@ def run(game):
     name = welcome()
     print(game.RULES)
     win = 0
-    for i in range(ROUND):
+    for i in range(ROUND_COUNT):
         numbers = generate_number(
             game.NUMBER_COUNT, game.LIMIT, game.START_NUMBER)
         question, right_answer = game.main(numbers)
