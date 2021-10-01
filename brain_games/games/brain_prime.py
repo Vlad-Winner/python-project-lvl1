@@ -1,7 +1,7 @@
+from random import randrange
+
+
 RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'
-NUMBER_COUNT = 1
-LIMIT = 300
-START_NUMBER = 2
 
 
 def is_prime(n):
@@ -13,8 +13,8 @@ def is_prime(n):
     return d * d > n
 
 
-def get_question_and_answer(number):
-    question = number[0]
+def get_question_and_answer():
+    question = randrange(2, 300)
     if is_prime(question):
         answer = 'yes'
     else:

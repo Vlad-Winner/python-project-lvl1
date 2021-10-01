@@ -2,24 +2,32 @@ from random import randrange
 
 
 RULES = 'What number is missing in the progression?'
-NUMBER_COUNT = 1
-LIMIT = 30
-START_NUMBER = 2
 
 
-def get_question_and_answer(question_array):
-    sequence_amount = randrange(5, 11)
-    step = randrange(2, 11)
-    missing_number = randrange(sequence_amount)
-    for i in range(sequence_amount - 1):
-        question_array.append(question_array[i] + step)
-    question_array[missing_number], answer = (
-        '..',
-        str(question_array[missing_number]))
-    question = ''
-    for i in range(len(question_array)):
-        if i < len(question_array) - 1:
-            question += str(question_array[i]) + ' '
+def get_arithmetic_series():
+    series_amount = randrange(5, 11)
+    difference = randrange(2, 16)
+    first_number = randrange(2, 30)
+    arithmetic_series = [first_number]
+    for i in range(series_amount):
+        arithmetic_series.append(arithmetic_series[i] + difference)
+    return arithmetic_series
+
+
+def convert_arithmetic_series_to_string(arithmetic_series):
+    arithmetic_series_str = ''
+    for i in range(len(arithmetic_series)):
+        if i < len(arithmetic_series) - 1:
+            arithmetic_series_str += str(arithmetic_series[i]) + ' '
         else:
-            question += str(question_array[i])
-    return question, answer
+            arithmetic_series_str += str(arithmetic_series[i]) + ' '
+    return arithmetic_series_str
+
+
+def get_question_and_answer():
+    question = get_arithmetic_series()
+    missing_number = randrange(len(question))
+    question[missing_number], answer = (
+        '..',
+        str(question[missing_number]))
+    return convert_arithmetic_series_to_string(question), answer
