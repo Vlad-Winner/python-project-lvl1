@@ -1,15 +1,7 @@
 import prompt
-from random import randrange
 
 
 ROUND_COUNT = 3
-
-
-def generate_number(count, limit, start_number):
-    numbers = []
-    for i in range(count):
-        numbers.append(randrange(start_number, limit))
-    return numbers
 
 
 def run(game):
