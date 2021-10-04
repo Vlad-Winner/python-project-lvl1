@@ -4,19 +4,20 @@ from random import randrange
 
 
 RULES = 'What is he result of the expression?'
+NUMBER_START = 1
+NUMBER_LIMIT = 55
 
 
 def get_question_and_answer():
     operators = ['+', '-', '*']
     operator = choice(operators)
-    numbers = []
-    for i in range(2):
-        numbers.append(randrange(1, 55))
-    question = '{} {} {}'.format(numbers[0], operator, numbers[1])
+    number_first = randrange(NUMBER_START, NUMBER_LIMIT)
+    number_second = randrange(NUMBER_START, NUMBER_LIMIT)
+    question = '{} {} {}'.format(number_first, operator, number_second)
     if operator == '-':
-        answer = str(numbers[0] - numbers[1])
+        answer = str(number_first - number_second)
     elif operator == '+':
-        answer = str(numbers[0] + numbers[1])
+        answer = str(number_first + number_second)
     elif operator == '*':
-        answer = str(numbers[0] * numbers[1])
+        answer = str(number_first * number_second)
     return question, answer
